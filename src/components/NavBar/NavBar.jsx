@@ -1,20 +1,20 @@
 import CartWidget from "../cartWidget/CartWidget";
-import "./navbar.css";
+import "./NavBar.css";
 
 const NavBar = () => {
   return (
     <div className="navBarContainer">
-        <h2>Comision 57785</h2>
+      <h2>Comision 57785</h2>
 
-        <ul >
-            <li>Todas</li>
-            <li>Urbanas</li>
-            <li>Deportivas</li>
-        </ul>
+      <ul>
+        <li>Todas</li>
+        <li>Urbanas</li>
+        <li>Deportivas</li>
+      </ul>
 
-        <CartWidget />
+      <CartWidget />
     </div>
-  )
-}
+  );
+};
 
 export default NavBar;
