@@ -1,12 +1,12 @@
-import { NavBar } from "./components/NavBar/NavBar.jsx";
-function App() {
-  let curso = 57785;
+import NavBar  from "./components/NavBar/NavBar";
+import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
 
+function App() {
   return (
-    <>
+    <div>
       <NavBar />
-      <h1>"Hola mundo! Curso n° {curso}</h1>
-    </>
+      <ItemListContainer greeting={"hola como estas"} />
+    </div>
   );
 }
 
