@@ -1,10 +1,11 @@
 import CartWidget from "../cartWidget/CartWidget";
+import MainIcon from "../mainIcon/MainIcon";
 import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <div className="navBarContainer">
-      <h2>Comision 57785</h2>
+    <nav className="navBarContainer">
+      <MainIcon />
 
       <ul>
         <li>Todas</li>
@@ -13,7 +14,7 @@ const NavBar = () => {
       </ul>
 
       <CartWidget />
-    </div>
+    </nav>
   );
 };
 

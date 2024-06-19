@@ -1,6 +1,10 @@
 .navBarContainer{
-    background-color: cadetblue;
+    background-color: black;
+    color: white;
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
