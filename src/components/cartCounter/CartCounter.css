@@ -1,0 +1,12 @@
+.cartCounter{
+    display: flex;
+    position: absolute;
+    background-color: rgba(127, 255, 212, 0.781);
+    color: black;
+    border-radius: 100%;
+    width: 19px;
+
+    justify-content: center;
+    align-items: center;
+    right: 0;
+}
