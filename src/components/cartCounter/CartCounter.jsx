@@ -1,9 +1,9 @@
-import "./CartCounter.css"
-
-const CartCounter = () => {
+export const CartCounter = ({ restar, contador, sumar }) => {
   return (
-    <div className="cartCounter">1</div>
-  )
-}
-
-export default CartCounter
+    <div>
+      <button onClick={restar}>Restar</button>
+      <h2>{contador}</h2>
+      <button onClick={sumar}>Sumar</button>
+    </div>
+  );
+};
