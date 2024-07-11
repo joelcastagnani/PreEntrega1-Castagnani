@@ -1,10 +1,10 @@
-const ItemList = ({ greeting, numero, sumar }) => {
+const ItemList = ({ items }) => {
   return (
-    <div>
-      <h1>{greeting}</h1>
-      <h1>{numero}</h1>
-      <button onClick={sumar}>sumar</button>
-    </div>
+    <>
+      <h1>dsads</h1>
+      <h1>dsadsads</h1>
+      <h1>dsadsadsa</h1>
+    </>
   );
 };
 

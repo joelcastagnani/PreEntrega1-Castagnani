@@ -1,4 +1,4 @@
-[
+export let products = [
   {
     id: 1,
     title: "Camiseta Básica",
