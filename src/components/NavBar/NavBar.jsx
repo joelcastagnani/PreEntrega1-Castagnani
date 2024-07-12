@@ -5,20 +5,22 @@ import "./NavBar.css";
 const NavBar = ({ children }) => {
   console.log(children);
   return (
-    <nav className="navBarContainer">
-      <MainIcon />
+    <>
+      <nav className="navBarContainer">
+        <MainIcon />
 
-      <ul>
-        <li>Todas</li>
-        <li>Urbanas</li>
-        <li>Deportivas</li>
-      </ul>
+        <ul>
+          <li>Todas</li>
+          <li>Urbanas</li>
+          <li>Deportivas</li>
+        </ul>
 
-      <CartWidget />
+        <CartWidget />
+      </nav>
 
       {children}
-    </nav>
+    </>
   );
 };
 
-export default NavBar
+export default NavBar;
