@@ -2,7 +2,8 @@ import CartWidget from "../cartWidget/CartWidget";
 import MainIcon from "../mainIcon/MainIcon";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ children }) => {
+  console.log(children);
   return (
     <nav className="navBarContainer">
       <MainIcon />
@@ -14,8 +15,10 @@ const NavBar = () => {
       </ul>
 
       <CartWidget />
+
+      {children}
     </nav>
   );
 };
 
-export default NavBar;
+export default NavBar

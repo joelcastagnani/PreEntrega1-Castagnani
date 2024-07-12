@@ -6,10 +6,9 @@ import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
 function App() {
   return (
     <>
-      <NavBar />
-      <ItemListContainer />
-      <FetchData />
-      <ItemDetailContainer />
+      <NavBar >
+        <ItemListContainer />
+      </NavBar>
     </>
   );
 }

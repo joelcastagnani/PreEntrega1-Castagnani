@@ -1,6 +1,7 @@
 import ItemList from "./ItemList";
 import { products } from "../../product";
 import { useState, useEffect } from "react";
+import "./ItemList.css";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
