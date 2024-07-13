@@ -1,15 +1,7 @@
-import { useEffect, useState } from "react";
+import { useFetch } from "../hooks/useFetch";
 
 const Users = () => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    let getUsers = fetch("https://jsonplaceholder.typicode.com/users");
-    getUsers.then((res) => res.json()).then((res) => setUsers(res));
-  }, []);
-
-  console.log(users);
-
+  let users  = useFetch("https://jsonplaceholder.typicode.com/users", []);
   return (
     <div>
       {users.map((user) => (
