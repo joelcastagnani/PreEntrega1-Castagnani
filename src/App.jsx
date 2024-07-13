@@ -9,7 +9,7 @@ import Users from "./pages/Users";
 function App() {
   return (
     <>
-      <Posts />
+      <Todos />
     </>
   );
 }
