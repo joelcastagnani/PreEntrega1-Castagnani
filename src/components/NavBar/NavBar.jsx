@@ -1,25 +1,28 @@
 import CartWidget from "../cartWidget/CartWidget";
 import MainIcon from "../mainIcon/MainIcon";
 import "./NavBar.css";
+import { Link, Outlet } from "react-router-dom";
 
 const NavBar = ({ children }) => {
-  console.log(children);
   return (
-    <>
-      <nav className="navBarContainer">
-        <MainIcon />
+    <div>
+      <>
+        <nav className="navBarContainer">
+          <Link to="/">
+            <MainIcon />
+          </Link>
 
-        <ul>
-          <li>Todas</li>
-          <li>Urbanas</li>
-          <li>Deportivas</li>
-        </ul>
+          <ul>
+            <li>Todas</li>
+            <li>Urbanas</li>
+            <li>Deportivas</li>
+          </ul>
 
-        <CartWidget />
-      </nav>
-
-      {children}
-    </>
+          <CartWidget />
+        </nav>
+      </>
+      <Outlet />
+    </div>
   );
 };
 

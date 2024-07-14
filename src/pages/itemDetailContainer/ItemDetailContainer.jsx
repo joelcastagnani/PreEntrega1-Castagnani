@@ -1,19 +1,20 @@
-import { useEffect, useState } from "react"
-import ItemDetail from "./ItemDetail"
+import { useEffect, useState } from "react";
+import ItemDetail from "./ItemDetail";
 import { products } from "../../product";
-
+import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
-    let id = 2;
-    const [ item, setItem ] = useState( {} )
+  const { id } = useParams();
 
-    useEffect(() => {
-        let product = products.find( product => product.id === id)
-        if(product){
-            setItem( product );
-        }
-    }, [ id ] )
+  const [item, setItem] = useState({});
 
-  return <ItemDetail  item={item} /> ;
-}
+  useEffect(() => {
+    let product = products.find((product) => product.id === +id);
+    if (product) {
+      setItem(product);
+    }
+  }, [id]);
+
+  return <ItemDetail item={item} />;
+};
 
 export default ItemDetailContainer;
