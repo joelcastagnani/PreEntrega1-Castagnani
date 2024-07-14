@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const CartWidget = () => {
   return (
     <Link to="/cart">
-      <CartCounterContainer />
+      {/* <CartCounterContainer /> */}
       <CiShoppingCart size="2.7em" className="cartWidget" />
     </Link>
   );

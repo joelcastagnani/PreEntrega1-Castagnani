@@ -1,7 +1,7 @@
 import CartWidget from "../cartWidget/CartWidget";
 import MainIcon from "../mainIcon/MainIcon";
 import "./NavBar.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBar = ({ children }) => {
   return (
@@ -13,15 +13,15 @@ const NavBar = ({ children }) => {
           </Link>
 
           <ul>
-            <li>Todas</li>
-            <li>Urbanas</li>
-            <li>Deportivas</li>
+            <Link to="/category/Camisetas">Camisetas</Link>
+            <Link to="/category/Pantalones">Pantalones</Link>
+            <Link to="/category/Abrigos">Abrigos</Link>
+            <Link to="/category/Vestidos">Vestidos</Link>
           </ul>
 
           <CartWidget />
         </nav>
       </>
-      <Outlet />
     </div>
   );
 };

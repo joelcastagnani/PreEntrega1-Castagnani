@@ -1,22 +1,21 @@
-import FetchData from "./components/fetchData/FetchData";
-import NavBar from "./components/NavBar/NavBar";
+import Layout from "./components/latout/Layout";
 import Cart from "./pages/cart/Cart";
 import ItemDetailContainer from "./pages/itemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
-import Posts from "./pages/Posts";
-import Todos from "./pages/Todos";
-import Users from "./pages/Users";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<NavBar />}>
+        <Route element={<Layout />}>
           <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:name" element={<ItemListContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
         </Route>
+
+        <Route path="*" element={<h1> 404 Not found</h1>} />
       </Routes>
     </BrowserRouter>
   );
