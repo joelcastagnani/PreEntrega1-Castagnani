@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CartCounter } from "./CartCounter";
 
-const CartCounterContainer = () => {
+const CartCounterContainer = ({ onAdd }) => {
   const [contador, setContador] = useState(1);
 
   const sumar = () => {
@@ -15,7 +15,14 @@ const CartCounterContainer = () => {
     }
   };
 
-  return <CartCounter contador={contador} sumar={sumar} restar={restar} />;
+  return (
+    <CartCounter
+      contador={contador}
+      sumar={sumar}
+      restar={restar}
+      onAdd={onAdd}
+    />
+  );
 };
 
 export default CartCounterContainer;

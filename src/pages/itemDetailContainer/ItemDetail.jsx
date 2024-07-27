@@ -8,12 +8,12 @@ import Typography from "@mui/material/Typography";
 import { CartCounter } from "../../components/cartCounter/CartCounter";
 import CartCounterContainer from "../../components/cartCounter/CartCounterContainer";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, onAdd }) => {
   return (
     <>
       {<h1>titulo</h1>}
 
-      {/* <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           sx={{ height: 140 }}
           image="/static/images/cards/contemplative-reptile.jpg"
@@ -32,9 +32,9 @@ const ItemDetail = ({ item }) => {
           <Button size="small">Share</Button>
           <Button size="small">Learn More</Button>
         </CardActions>
-      </Card> */}
+      </Card>
 
-      <CartCounterContainer />
+      <CartCounterContainer onAdd={onAdd} />
     </>
   );
 };
