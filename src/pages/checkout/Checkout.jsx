@@ -1,27 +1,16 @@
 import { useState } from "react";
 
 const Checkout = () => {
-  const [nombre, setNombre] = useState("");
-  const [email, setEmail] = useState("");
-  const [telefono, setTelefono] = useState("");
+  const [user, setUser] = useState({ nombre: "", email: "", telefono: "" });
 
   const envioDeFormulario = (event) => {
     event.preventDefault();
     console.log("Le mandamos toda la info al server");
-
-    console.log(nombre);
-    console.log(email);
-    console.log(telefono);
+    console.log(user);
   };
-
-  const capturarNombre = (event) => {
-    setNombre(event.target.value);
-  };
-  const capturarEmail = (event) => {
-    setEmail(event.target.value);
-  };
-  const capturarTelefono = (event) => {
-    setTelefono(event.target.value);
+  const handleChange = (event) => {
+    let { name, value } = event.target;
+    setUser({ ...user, [name]: value });
   };
 
   return (
@@ -31,22 +20,27 @@ const Checkout = () => {
         <input
           type="text"
           placeholder="Ingresa tu nombre"
-          onChange={capturarNombre}
+          onChange={handleChange}
           name="nombre"
         />
 
         <input
           type="text"
           placeholder="Ingresa tu email"
-          onChange={capturarEmail}
+          onChange={handleChange}
           name="email"
         />
         <input
           type="text"
           placeholder="Ingresa tu telefono"
-          onChange={capturarTelefono}
+          onChange={handleChange}
           name="telefono"
         />
+
+        <select onChange={handleChange}>
+          <option label="uno" value={"one"} />
+          <option label="dos" value={"two"} />
+        </select>
 
         <button>Enviar</button>
         <button type="button">Cancelar</button>
