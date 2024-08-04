@@ -1,14 +1,27 @@
 import { Button } from "@mui/material";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../context/CartContext";
+import CartContextProvider, { CartContext } from "../../context/CartContext";
 
 const Cart = () => {
-  const { cart, clearCart } = useContext(CartContext);
-
+  const { cart, clearCart, deleteProduct } = useContext(CartContext);
+  console.log(cart);
   return (
     <div>
-      <h1>Carrito</h1>
+      {cart.map((elemento) => {
+        return (
+          <div key={elemento.id}>
+            <h1>{elemento.title}</h1>
+            <h4>{elemento.quantity}</h4>
+            <Button
+              variant="contained"
+              onClick={() => deleteProduct(elemento.id)}
+            >
+              Eliminar
+            </Button>
+          </div>
+        );
+      })}
 
       <Button onClick={clearCart}>LimpiarCarrito</Button>
       <Link to="/checkout">
