@@ -2,12 +2,30 @@ import { Button } from "@mui/material";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import CartContextProvider, { CartContext } from "../../context/CartContext";
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const { cart, clearCart, deleteProduct, getTotalPrice } =
     useContext(CartContext);
   let total = getTotalPrice();
-  console.log(cart);
+
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Seguro queres eliminar?",
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonText: "Si, borrar",
+      denyButtonText: `No, no borrar`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Eliminado", "", "success");
+        deleteProduct(id);
+      } else if (result.isDenied) {
+        Swal.fire("No se elimino", "", "info");
+      }
+    });
+  };
+
   return (
     <div>
       {cart.map((elemento) => {
@@ -18,7 +36,7 @@ const Cart = () => {
             <h4>{elemento.price}</h4>
             <Button
               variant="contained"
-              onClick={() => deleteProduct(elemento.id)}
+              onClick={() => handleDelete(elemento.id)}
             >
               Eliminar
             </Button>
@@ -26,7 +44,9 @@ const Cart = () => {
         );
       })}
       <h5>El total a pagar es {total}</h5>
-      <Button onClick={clearCart}>LimpiarCarrito</Button>
+
+      {cart.length > 0 && <Button onClick={clearCart}>LimpiarCarrito</Button>}
+
       <Link to="/checkout">
         <Button variant="contained">Finalizar compra</Button>
       </Link>

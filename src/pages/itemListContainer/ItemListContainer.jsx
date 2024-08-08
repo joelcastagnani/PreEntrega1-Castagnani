@@ -3,6 +3,7 @@ import { products } from "../../product";
 import { useState, useEffect } from "react";
 import "./ItemList.css";
 import { useParams } from "react-router-dom";
+import { SyncLoader } from "react-spinners";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -17,7 +18,9 @@ const ItemListContainer = () => {
         (product) => product.category === name
       );
       if (x) {
-        resolve(name ? arrayFiltered : products);
+        setTimeout(() => {
+          resolve(name ? arrayFiltered : products);
+        }, 1000);
       } else {
         reject({ message: "error", codigo: "404" });
       }
@@ -32,6 +35,10 @@ const ItemListContainer = () => {
         setError(error);
       });
   }, [name]);
+
+  if (items.length === 0) {
+    return <SyncLoader />; //aca iria el skeleton
+  }
 
   return <ItemList items={items} />;
 };

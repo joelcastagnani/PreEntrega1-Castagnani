@@ -31,7 +31,6 @@ const CartContextProvider = ({ children }) => {
     return existe;
   };
   const deleteProduct = (id) => {
-    console.log(id);
     let newArr = cart.filter((elemento) => elemento.id !== id);
     setCart(newArr);
   };
@@ -48,6 +47,13 @@ const CartContextProvider = ({ children }) => {
     return total;
   };
 
+  const getTotalItems = () => {
+    let total = cart.reduce((acc, elemento) => {
+      return acc + elemento.quantity;
+    }, 0);
+    return total;
+  };
+
   let data = {
     cart,
     addToCart,
@@ -55,6 +61,7 @@ const CartContextProvider = ({ children }) => {
     deleteProduct,
     getQuantityById,
     getTotalPrice,
+    getTotalItems,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
