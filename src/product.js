@@ -5,7 +5,7 @@ export let products = [
     price: 15.99,
     description: "Camiseta de algodón 100%, disponible en varios colores.",
     img: "https://goo.su/UEbw9",
-    stock: 100,
+    stock: 6,
     category: "Camisetas",
   },
   {

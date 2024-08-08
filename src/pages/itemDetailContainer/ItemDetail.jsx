@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import { CartCounter } from "../../components/cartCounter/CartCounter";
 import CartCounterContainer from "../../components/cartCounter/CartCounterContainer";
 
-const ItemDetail = ({ item, onAdd }) => {
+const ItemDetail = ({ item, onAdd, initial }) => {
   return (
     <>
       {<h1>titulo</h1>}
@@ -34,7 +34,11 @@ const ItemDetail = ({ item, onAdd }) => {
         </CardActions>
       </Card>
 
-      <CartCounterContainer onAdd={onAdd} />
+      <CartCounterContainer
+        onAdd={onAdd}
+        stock={item.stock}
+        initial={initial}
+      />
     </>
   );
 };
