@@ -4,36 +4,30 @@ import { useState, useEffect } from "react";
 import "./ItemList.css";
 import { useParams } from "react-router-dom";
 import { SyncLoader } from "react-spinners";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import firebase from "firebase/compat/app";
+import { db } from "../../firebaseConfig";
 
 const ItemListContainer = () => {
-  const [items, setItems] = useState([]);
-  const [error, setError] = useState({});
   const { name } = useParams();
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    //SE CREA LA PROMESA (Esto no lo vamos a tener que hacer)
-    const getProducts = new Promise((resolve, reject) => {
-      let x = true;
-      let arrayFiltered = products.filter(
-        (product) => product.category === name
-      );
-      if (x) {
-        setTimeout(() => {
-          resolve(name ? arrayFiltered : products);
-        }, 1000);
-      } else {
-        reject({ message: "error", codigo: "404" });
-      }
-    });
+    let productsCollection = collection(db, "products");
 
-    //SE MANEJA LA PROMESA (Esto si)
-    getProducts
-      .then((res) => {
-        setItems(res);
-      })
-      .catch((error) => {
-        setError(error);
+    let consulta = productsCollection;
+    if (name) {
+      consulta = query(productsCollection, where("category", "==", name));
+    }
+
+    let getProducts = getDocs(consulta);
+
+    getProducts.then((res) => {
+      let arrayValido = res.docs.map((product) => {
+        return { ...product.data(), id: product.id };
       });
+      setItems(arrayValido);
+    });
   }, [name]);
 
   if (items.length === 0) {
