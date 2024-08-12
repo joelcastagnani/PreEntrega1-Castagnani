@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import "./ItemList.css";
 import { useParams } from "react-router-dom";
 import { SyncLoader } from "react-spinners";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
 import firebase from "firebase/compat/app";
 import { db } from "../../firebaseConfig";
+import Button from "@mui/material/Button";
 
 const ItemListContainer = () => {
   const { name } = useParams();
@@ -21,7 +22,6 @@ const ItemListContainer = () => {
     }
 
     let getProducts = getDocs(consulta);
-
     getProducts.then((res) => {
       let arrayValido = res.docs.map((product) => {
         return { ...product.data(), id: product.id };
@@ -34,7 +34,20 @@ const ItemListContainer = () => {
     return <SyncLoader />; //aca iria el skeleton
   }
 
-  return <ItemList items={items} />;
+  // const addPoroducts = () => {
+  //   let productsCollection = collection(db, "products");
+
+  //   products.forEach((elemento) => {
+  //     addDoc(productsCollection, elemento);
+  //   });
+  // };
+
+  return (
+    <div>
+      {/* <Button onClick={addPoroducts}>Agregar productos</Button> */}
+      <ItemList items={items} />
+    </div>
+  );
 };
 
 export default ItemListContainer;

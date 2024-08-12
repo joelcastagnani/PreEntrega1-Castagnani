@@ -1,6 +1,5 @@
 export let products = [
   {
-    id: 1,
     title: "Camiseta Básica",
     price: 15.99,
     description: "Camiseta de algodón 100%, disponible en varios colores.",
@@ -9,7 +8,6 @@ export let products = [
     category: "Camisetas",
   },
   {
-    id: 2,
     title: "Camiseta Estampada",
     price: 18.99,
     description: "Camiseta con estampado divertido, hecha de algodón.",
@@ -18,7 +16,6 @@ export let products = [
     category: "Camisetas",
   },
   {
-    id: 3,
     title: "Camiseta Deportiva",
     price: 22.99,
     description: "Camiseta deportiva de material transpirable.",
@@ -27,7 +24,6 @@ export let products = [
     category: "Camisetas",
   },
   {
-    id: 4,
     title: "Camiseta Manga Larga",
     price: 20.99,
     description: "Camiseta de manga larga para mayor confort.",
@@ -36,7 +32,6 @@ export let products = [
     category: "Camisetas",
   },
   {
-    id: 5,
     title: "Camiseta Slim Fit",
     price: 19.99,
     description: "Camiseta ajustada para un look moderno.",
@@ -45,7 +40,6 @@ export let products = [
     category: "Camisetas",
   },
   {
-    id: 6,
     title: "Camiseta V-Cut",
     price: 16.99,
     description: "Camiseta con cuello en V, perfecta para el verano.",
@@ -54,7 +48,6 @@ export let products = [
     category: "Camisetas",
   },
   {
-    id: 7,
     title: "Camiseta Oversize",
     price: 24.99,
     description: "Camiseta de estilo oversize para mayor comodidad.",
@@ -63,7 +56,6 @@ export let products = [
     category: "Camisetas",
   },
   {
-    id: 8,
     title: "Camiseta Vintage",
     price: 26.99,
     description: "Camiseta con diseño vintage, hecha de algodón orgánico.",
@@ -72,7 +64,6 @@ export let products = [
     category: "Camisetas",
   },
   {
-    id: 9,
     title: "Camiseta Rayada",
     price: 17.99,
     description:
@@ -82,7 +73,6 @@ export let products = [
     category: "Camisetas",
   },
   {
-    id: 10,
     title: "Camiseta Polo",
     price: 29.99,
     description: "Camiseta tipo polo con cuello y botones.",
@@ -91,7 +81,6 @@ export let products = [
     category: "Camisetas",
   },
   {
-    id: 11,
     title: "Pantalones Vaqueros",
     price: 49.99,
     description: "Pantalones vaqueros de corte recto y cintura alta.",
@@ -100,7 +89,6 @@ export let products = [
     category: "Pantalones",
   },
   {
-    id: 12,
     title: "Pantalones Chinos",
     price: 39.99,
     description: "Pantalones chinos elegantes y cómodos.",
@@ -109,7 +97,6 @@ export let products = [
     category: "Pantalones",
   },
   {
-    id: 13,
     title: "Pantalones Deportivos",
     price: 35.99,
     description: "Pantalones deportivos con cintura elástica.",
@@ -118,7 +105,6 @@ export let products = [
     category: "Pantalones",
   },
   {
-    id: 14,
     title: "Pantalones Cargo",
     price: 44.99,
     description: "Pantalones cargo con múltiples bolsillos.",
@@ -127,7 +113,6 @@ export let products = [
     category: "Pantalones",
   },
   {
-    id: 15,
     title: "Pantalones de Vestir",
     price: 59.99,
     description: "Pantalones de vestir con corte slim.",
@@ -136,7 +121,6 @@ export let products = [
     category: "Pantalones",
   },
   {
-    id: 16,
     title: "Pantalones Cortos",
     price: 19.99,
     description: "Pantalones cortos de mezclilla con dobladillo.",
@@ -145,7 +129,6 @@ export let products = [
     category: "Pantalones",
   },
   {
-    id: 17,
     title: "Pantalones Jogger",
     price: 29.99,
     description: "Pantalones jogger de algodón, perfectos para el día a día.",
@@ -154,7 +137,6 @@ export let products = [
     category: "Pantalones",
   },
   {
-    id: 18,
     title: "Pantalones Anchos",
     price: 32.99,
     description: "Pantalones anchos y cómodos, ideales para el verano.",
@@ -163,7 +145,6 @@ export let products = [
     category: "Pantalones",
   },
   {
-    id: 19,
     title: "Pantalones Skinny",
     price: 42.99,
     description: "Pantalones skinny de mezclilla elástica.",
@@ -172,7 +153,6 @@ export let products = [
     category: "Pantalones",
   },
   {
-    id: 20,
     title: "Pantalones Capri",
     price: 27.99,
     description: "Pantalones capri de estilo casual.",
@@ -181,7 +161,6 @@ export let products = [
     category: "Pantalones",
   },
   {
-    id: 21,
     title: "Abrigo de Lana",
     price: 120.0,
     description: "Abrigo de lana con solapa y cierre de botones.",
@@ -190,7 +169,6 @@ export let products = [
     category: "Abrigos",
   },
   {
-    id: 22,
     title: "Chaqueta de Cuero",
     price: 89.99,
     description: "Chaqueta de cuero auténtico con cierre de cremallera.",
@@ -199,7 +177,6 @@ export let products = [
     category: "Abrigos",
   },
   {
-    id: 23,
     title: "Chaqueta Vaquera",
     price: 59.99,
     description: "Chaqueta vaquera con bolsillos frontales.",
@@ -208,7 +185,6 @@ export let products = [
     category: "Abrigos",
   },
   {
-    id: 24,
     title: "Abrigo Acolchado",
     price: 99.99,
     description: "Abrigo acolchado con capucha desmontable.",
@@ -217,7 +193,6 @@ export let products = [
     category: "Abrigos",
   },
   {
-    id: 25,
     title: "Parka de Invierno",
     price: 120.0,
     description: "Parka de invierno con forro térmico.",
@@ -226,7 +201,6 @@ export let products = [
     category: "Abrigos",
   },
   {
-    id: 26,
     title: "Chaqueta Impermeable",
     price: 79.99,
     description: "Chaqueta impermeable con capucha ajustable.",
@@ -235,7 +209,6 @@ export let products = [
     category: "Abrigos",
   },
   {
-    id: 27,
     title: "Gabardina Clásica",
     price: 110.0,
     description: "Gabardina clásica con cinturón y doble botonadura.",
@@ -244,7 +217,6 @@ export let products = [
     category: "Abrigos",
   },
   {
-    id: 28,
     title: "Chaleco Acolchado",
     price: 55.99,
     description: "Chaleco acolchado con cierre de cremallera.",
@@ -253,111 +225,19 @@ export let products = [
     category: "Abrigos",
   },
   {
-    id: 29,
     title: "Abrigo de Pelo Sintético",
     price: 130.0,
-    description: "Abrigo de pelo sintético suave y cálido.",
+    description: "Abrigo de pelo sintético para un look elegante.",
     img: "https://goo.su/FoZZC",
     stock: 10,
     category: "Abrigos",
   },
   {
-    id: 30,
-    title: "Trenca con Capucha",
-    price: 115.0,
-    description: "Trenca clásica con capucha y cierre de alamar.",
+    title: "Chaqueta de Pana",
+    price: 79.99,
+    description: "Chaqueta de pana con forro de borrego.",
     img: "https://goo.su/FoZZC",
     stock: 15,
     category: "Abrigos",
-  },
-  {
-    id: 31,
-    title: "Vestido de Verano",
-    price: 29.99,
-    description: "Vestido de verano con estampado floral.",
-    img: "https://goo.su/v6343X1",
-    stock: 75,
-    category: "Vestidos",
-  },
-  {
-    id: 32,
-    title: "Vestido de Noche",
-    price: 89.99,
-    description: "Vestido de noche elegante con detalles de encaje.",
-    img: "https://goo.su/v6343X1",
-    stock: 25,
-    category: "Vestidos",
-  },
-  {
-    id: 33,
-    title: "Vestido Casual",
-    price: 39.99,
-    description: "Vestido casual de algodón, perfecto para el día a día.",
-    img: "https://goo.su/v6343X1",
-    stock: 60,
-    category: "Vestidos",
-  },
-  {
-    id: 34,
-    title: "Vestido de Fiesta",
-    price: 79.99,
-    description: "Vestido de fiesta con lentejuelas y corte ajustado.",
-    img: "https://goo.su/v6343X1",
-    stock: 30,
-    category: "Vestidos",
-  },
-  {
-    id: 35,
-    title: "Vestido Midi",
-    price: 49.99,
-    description: "Vestido midi con vuelo y estampado floral.",
-    img: "https://goo.su/v6343X1",
-    stock: 45,
-    category: "Vestidos",
-  },
-  {
-    id: 36,
-    title: "Vestido Largo",
-    price: 59.99,
-    description: "Vestido largo con tirantes ajustables.",
-    img: "https://goo.su/v6343X1",
-    stock: 35,
-    category: "Vestidos",
-  },
-  {
-    id: 37,
-    title: "Vestido de Encaje",
-    price: 69.99,
-    description: "Vestido de encaje con manga larga y corte ajustado.",
-    img: "https://goo.su/v6343X1",
-    stock: 40,
-    category: "Vestidos",
-  },
-  {
-    id: 38,
-    title: "Vestido de Punto",
-    price: 54.99,
-    description: "Vestido de punto suave y cómodo, ideal para el otoño.",
-    img: "https://goo.su/v6343X1",
-    stock: 50,
-    category: "Vestidos",
-  },
-  {
-    id: 39,
-    title: "Vestido Estampado",
-    price: 44.99,
-    description: "Vestido con estampado geométrico y corte suelto.",
-    img: "https://goo.su/v6343X1",
-    stock: 55,
-    category: "Vestidos",
-  },
-  {
-    id: 40,
-    title: "Vestido Halter",
-    price: 32.99,
-    description: "Vestido halter con espalda descubierta.",
-    img: "https://goo.su/v6343X1",
-    stock: 60,
-    category: "Vestidos",
   },
 ];
