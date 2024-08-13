@@ -29,7 +29,6 @@ const CheckoutFormik = () => {
 
     validateOnChange: false,
   });
-  console.log(errors);
 
   return (
     <form onSubmit={handleSubmit}>
