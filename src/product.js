@@ -240,4 +240,84 @@ export let products = [
     stock: 15,
     category: "Abrigos",
   },
+  {
+    title: "Vestido de Verano",
+    price: 29.99,
+    description: "Vestido de verano ligero con estampado floral, disponible en tallas S, M y L.",
+    img: "https://goo.su/GgyhlDb",
+    stock: 10,
+    category: "Vestidos"
+  },
+  {
+    title: "Vestido Formal Negro",
+    price: 45.99,
+    description: "Vestido formal negro, ideal para eventos nocturnos. Disponible en tallas M y L.",
+    img: "https://goo.su/GgyhlDb",
+    stock: 5,
+    category: "Vestidos"
+  },
+  {
+    title: "Vestido de Fiesta",
+    price: 39.99,
+    description: "Vestido de fiesta con lentejuelas, disponible en varios colores y tallas.",
+    img: "https://goo.su/GgyhlDb",
+    stock: 8,
+    category: "Vestidos"
+  },
+  {
+    title: "Vestido Maxi",
+    price: 34.99,
+    description: "Vestido maxi de algodón, perfecto para el día a día. Disponible en tallas S y M.",
+    img: "https://goo.su/GgyhlDb",
+    stock: 12,
+    category: "Vestidos"
+  },
+  {
+    title: "Vestido Bohemio",
+    price: 27.99,
+    description: "Vestido bohemio con detalles bordados, disponible en varias tallas.",
+    img: "https://goo.su/GgyhlDb",
+    stock: 7,
+    category: "Vestidos"
+  },
+  {
+    title: "Vestido de Noche",
+    price: 49.99,
+    description: "Elegante vestido de noche con escote en V, disponible en tallas M y L.",
+    img: "https://goo.su/GgyhlDb",
+    stock: 4,
+    category: "Vestidos"
+  },
+  {
+    title: "Vestido Casual",
+    price: 24.99,
+    description: "Vestido casual de manga corta, ideal para el verano. Disponible en varias tallas y colores.",
+    img: "https://goo.su/GgyhlDb",
+    stock: 15,
+    category: "Vestidos"
+  },
+  {
+    title: "Vestido de Encaje",
+    price: 37.99,
+    description: "Vestido de encaje elegante, perfecto para bodas y eventos especiales. Disponible en tallas S, M y L.",
+    img: "https://goo.su/GgyhlDb",
+    stock: 6,
+    category: "Vestidos"
+  },
+  {
+    title: "Vestido de Cóctel",
+    price: 42.99,
+    description: "Vestido de cóctel ajustado, disponible en varios colores. Tallas disponibles: S, M y L.",
+    img: "https://goo.su/GgyhlDb",
+    stock: 9,
+    category: "Vestidos"
+  },
+  {
+    title: "Vestido de Playa",
+    price: 22.99,
+    description: "Vestido de playa suelto y cómodo, disponible en varios colores y tallas.",
+    img: "https://goo.su/GgyhlDb",
+    stock: 14,
+    category: "Vestidos"
+  }
 ];
