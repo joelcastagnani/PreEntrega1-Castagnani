@@ -4,6 +4,7 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 const NavBar = ({ children }) => {
+  let rol = "admin";
   return (
     <div>
       <>
@@ -18,6 +19,7 @@ const NavBar = ({ children }) => {
             <Link to="/category/Abrigos">Abrigos</Link>
             <Link to="/category/Vestidos">Vestidos</Link>
           </ul>
+          {rol === "admin" && <Link to="/dashboard">Dashboard</Link>}
 
           <CartWidget />
         </nav>
