@@ -22,6 +22,7 @@ const ItemListContainer = () => {
     }
 
     let getProducts = getDocs(consulta);
+
     getProducts.then((res) => {
       let arrayValido = res.docs.map((product) => {
         return { ...product.data(), id: product.id };
@@ -33,14 +34,6 @@ const ItemListContainer = () => {
   if (items.length === 0) {
     return <SyncLoader />; //aca iria el skeleton
   }
-
-  // const addPoroducts = () => {
-  //   let productsCollection = collection(db, "products");
-
-  //   products.forEach((elemento) => {
-  //     addDoc(productsCollection, elemento);
-  //   });
-  // };
 
   return (
     <div>
