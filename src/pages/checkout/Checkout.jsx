@@ -1,11 +1,15 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 const Checkout = () => {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({ nombre: "", email: "", telefono: "" });
-  const { cart, getTotalPrice } = useContext(CartContext);
+  const { cart, getTotalPrice, clearCart } = useContext(CartContext);
   const [orderId, setOrderId] = useState("");
 
   let total = getTotalPrice();
@@ -19,7 +23,22 @@ const Checkout = () => {
     };
 
     let ordersCollection = collection(db, "orders");
-    addDoc(ordersCollection, order).then((res) => setOrderId(res.id));
+    let productsCollection = collection(db, "products");
+    cart.forEach((elemento) => {
+      let refDoc = doc(productsCollection, elemento.id);
+      updateDoc(refDoc, { stock: elemento.stock - elemento.quantity });
+    });
+
+    addDoc(ordersCollection, order)
+      .then((res) => {
+        setOrderId(res.id);
+        toast.success(`Gracias por tu compra. Tu ticket es ${res.id}`);
+      })
+      .catch()
+      .finally(() => {
+        clearCart();
+        navigate("/");
+      });
   };
 
   const handleChange = (event) => {

@@ -7,10 +7,12 @@ import ItemDetailContainer from "./pages/itemDetailContainer/ItemDetailContainer
 import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartContextProvider from "./context/CartContext";
+import { Toaster } from "sonner";
 
 function App() {
   return (
     <BrowserRouter>
+      <Toaster richColors position="bottom-right" />
       <CartContextProvider>
         <Routes>
           <Route element={<Layout />}>
